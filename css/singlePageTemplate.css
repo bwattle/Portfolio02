@@ -27,13 +27,14 @@ header {
 	position: a;
 }
 .logo {
-	color: #fff;
+	color: #EB0A0E;
 	font-weight: bold;
-	text-align: undefined;
-	width: 10%;
-	float: left;
+	font-size: 30pt;
+	text-align: right;
+	width: 60%;
+	float: right;
 	margin-top: 15px;
-	margin-left: 25px;
+	margin-right: 50px;
 	letter-spacing: 4px;
 }
 nav {
