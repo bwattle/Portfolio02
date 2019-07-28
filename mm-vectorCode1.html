@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Embedded SVG</title>
+</head>
+<body>
+  <h2>200 pixel vector triangle the same as the bitmap - just 6 lines of code!</h2>
+		<!-- Code below taken from Paths – SVG 1.1 (Second Edition) -->
+	<!-- http://www.w3.org/TR/SVG/paths.html#PathDataClosePathCommand -->
+<svg width="400" height="400" viewBox="0 0 400 400"
+     xmlns="http://www.w3.org/2000/svg" version="1.1">
+  <desc>A path that draws a triangle 200 pixels wide by 200 high</desc>
+  <rect x="2" y="2" width="396" height="396"
+        fill="LightYellow" stroke="black" stroke-width="4" />
+  <path fill="red" stroke="blue" stroke-width="2" 
+		d="M 100 100 L 300 100 L 200 300 z" />
+
+  <!-- <defs> -->
+
+</svg>
+	  <h2>600 pixel vector triangle - still just 6 lines of code (about 360 characters, so less that half a kilobyte)</h2>
+		<!-- Code below taken from Paths – SVG 1.1 (Second Edition) -->
+	<!-- http://www.w3.org/TR/SVG/paths.html#PathDataClosePathCommand -->
+<svg width="800" height="800" viewBox="0 0 800 800"
+     xmlns="http://www.w3.org/2000/svg" version="1.1">
+  <desc>A path that draws a triangle 600 pixels wide by 600 high</desc>
+  <rect x="4" y="4" width="792" height="792"
+        fill="LightYellow" stroke="black" stroke-width="6"/>
+  <path d="M 100 100 L 700 100 L 400 700 z"
+        fill="red" stroke="blue" stroke-width="4" />
+</svg>
+	
+		  <h2>this is my modification of an SVG image:</h2>
+		<!-- Code below taken from Paths – SVG 1.1 (Second Edition) -->
+	<!-- http://www.w3.org/TR/SVG/paths.html#PathDataClosePathCommand -->
+<svg width="8cm" height="8cm" viewBox="0 0 800 800"
+     xmlns="http://www.w3.org/2000/svg" version="1.1">
+  <desc>Draw your own path</desc>
+  <path d="M 50 50 L 250 50"
+        fill="red" stroke="blue" stroke-width="20" />
+</svg>
+	
+<h2>A fancier vector drawing from GitHub - less than 40 lines of code (1048 characters, so around 1kb of file size)</h2>
+	  <h3>https://github.com/oreillymedia/Using_SVG/blob/master/ch01-overview-files/rasterization.svg</h3>
+<!-- SVG code -->
+<svg viewBox="0 0 480 350"
+     xmlns="http://www.w3.org/2000/svg" xml:lang="en"
+     xmlns:xlink="http://www.w3.org/1999/xlink" >
+    <style>
+        text {
+            font-family: Tahoma, sans-serif;
+            text-anchor: middle;
+            font-size: 18px;
+            fill: currentColor;
+        }
+        path {
+            stroke: dimgray; 
+            stroke-width: 4;
+            stroke-dasharray: 8 4;
+        }
+    </style>
+    <pattern id="low-res" patternUnits="userSpaceOnUse"
+             width="20" height="20">
+        <g id="dots">
+            <circle fill="red" r="5" cx="10" cy="5" />
+            <circle fill="lime" r="5" cx="5" cy="15" />
+            <circle fill="blue" r="5" cx="15" cy="15" />
+        </g>
+    </pattern>
+    <pattern id="high-res" patternUnits="userSpaceOnUse"
+             width="8" height="8" viewBox="0 0 20 20">
+        <use xlink:href="#dots" />
+    </pattern>
+    <g fill="url(#low-res)">
+        <text x="120" y="100%" dy="-1em" >Low-Resolution Display</text>
+        <path id="shape" 
+              d="M100,10 C200,0 300,250 120,200 S50,300 200,300 C0,200 0,20 100,10Z" />
+    </g>
+    <g transform="translate(240,0)" fill="url(#high-res)">
+        <text x="120" y="100%" dy="-1em" >High-Resolution Display</text>
+        <use xlink:href="#shape" />
+    </g>
+</svg>
+
+	
+
+</body>
+</html>
